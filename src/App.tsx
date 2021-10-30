@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import logo from './logo.svg'
+import arcadeCoin from './arcade-coin.svg'
 import './App.css'
 
 function App() {
@@ -7,9 +7,11 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
+      <div className='Coin-view'>
+        <p className="insert-coin-text">Insert coin</p>
+        <img src={arcadeCoin} className="App-logo" alt="logo"/>
+      </div>
+        {/* <p>Hello Vite + React!</p>
         <p>
           <button type="button" onClick={() => setCount((count) => count + 1)}>
             count is: {count}
@@ -36,8 +38,7 @@ function App() {
           >
             Vite Docs
           </a>
-        </p>
-      </header>
+        </p> */}
     </div>
   )
 }

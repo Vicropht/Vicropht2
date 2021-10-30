@@ -1,9 +1,11 @@
+@import url('http://fonts.cdnfonts.com/css/arcade-classic');
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
 }
 
@@ -13,8 +15,8 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
+.Coin-view {
+  background-color: #240046;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -26,6 +28,25 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.insert-coin-text {
+  font-family: 'ArcadeClassic', sans-serif;;
+  color: white;
+  width: 100%;
+  font-size: 40px;
+  letter-spacing: 12px;
+  text-shadow: -2px 0 0 #fdff2a,
+    -4px 0 0 #df4a42,
+    2px 0 0 #91fcfe,
+    4px 0 0 #4405fc;
+  animation: blink 1s steps(4, start) infinite
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
 }
 
 @keyframes App-logo-spin {
