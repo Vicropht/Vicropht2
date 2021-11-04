@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { SocialIcon } from 'react-social-icons';
 import arcadeCoin from './arcade-coin.svg'
 import './App.css'
 
@@ -8,10 +9,17 @@ function App() {
   return (
     <div className="App">
       <div className='Coin-view'>
-        <p className="insert-coin-text">Insert coin</p>
-        <img src={arcadeCoin} className="App-logo" alt="logo"/>
+        <p className="insert-coin-text">Under construction</p>
+        <span className="material-icons-outlined icon">construction</span>
+
+        <div className="socials">
+          <SocialIcon url="https://twitter.com/CristophVictor" />
+          <SocialIcon url="https://github.com/Vicropht" />
+          <SocialIcon url="mailto:vicropht@protonmail.com" />
+          <SocialIcon url="https://www.linkedin.com/in/vicropht/" />
+        </div>
       </div>
-        {/* <p>Hello Vite + React!</p>
+      {/* <p>Hello Vite + React!</p>
         <p>
           <button type="button" onClick={() => setCount((count) => count + 1)}>
             count is: {count}

@@ -1,4 +1,5 @@
 @import url('http://fonts.cdnfonts.com/css/arcade-classic');
+@import 'material-icons/iconfont/material-icons.css';
 
 .App {
   text-align: center;
@@ -13,6 +14,10 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.icon {
+  font-size: 200px;
 }
 
 .Coin-view {
@@ -41,6 +46,19 @@
     2px 0 0 #91fcfe,
     4px 0 0 #4405fc;
   animation: blink 1s steps(4, start) infinite
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: #9d4edd;
+  border-radius: 7px;
+}
+
+.socials > a {
+  margin: 7px;
 }
 
 @keyframes blink {

@@ -554,6 +554,11 @@ loose-envify@^1.1.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
+material-icons@^1.10.1:
+  version "1.10.1"
+  resolved "https://registry.yarnpkg.com/material-icons/-/material-icons-1.10.1.tgz#6b22f706e961abcb9b32b7970919d5f3567d080a"
+  integrity sha512-1DRuTO/ijtDcnyfSk8n172DFeMq+4U/VlXoKS2zJGossGIvAKe8ryBXh2c6/lEiX6XO9LJF/ZeN347UIiaSNUA==
+
 minimist@^1.2.5:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
