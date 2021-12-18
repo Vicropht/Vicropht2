@@ -5,13 +5,13 @@
   text-align: center;
 }
 
-.App-logo {
+.coin {
   height: 20vmin;
   cursor: pointer;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+  .coin {
     animation: App-logo-spin infinite 20s linear;
   }
 }

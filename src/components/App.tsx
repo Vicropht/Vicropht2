@@ -1,7 +1,7 @@
 import { SocialIcon } from 'react-social-icons'
 import arcadeCoin from './assets/arcade-coin.svg'
 import './App.css'
-import { Machine } from './components/machine/Machine'
+import { Machine } from './machine/Machine'
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,7 +15,7 @@ function App() {
       <div className='Coin-view'>
         <p className="insert-coin-text pointer">Insert coin</p>
         <Link to="/machine">
-          <img src={arcadeCoin} className="App-logo" alt="logo" />
+          <img src={arcadeCoin} className="coin" alt="coin" />
         </Link>
 
         <div className="socials">
