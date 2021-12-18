@@ -1,16 +1,22 @@
-import { useState } from 'react'
-import { SocialIcon } from 'react-social-icons';
-import arcadeCoin from './arcade-coin.svg'
+import { SocialIcon } from 'react-social-icons'
+import arcadeCoin from './assets/arcade-coin.svg'
 import './App.css'
+import { Machine } from './components/machine/Machine'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
       <div className='Coin-view'>
-        <p className="insert-coin-text">Under construction</p>
-        <span className="material-icons-outlined icon">construction</span>
+        <p className="insert-coin-text pointer">Insert coin</p>
+        <Link to="/machine">
+          <img src={arcadeCoin} className="App-logo" alt="logo" />
+        </Link>
 
         <div className="socials">
           <SocialIcon url="https://twitter.com/CristophVictor" />
@@ -19,35 +25,14 @@ function App() {
           <SocialIcon url="https://www.linkedin.com/in/vicropht/" />
         </div>
       </div>
-      {/* <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p> */}
+
+      <Switch>
+        <Route path="machine">
+          <Machine />
+        </Route>
+      </Switch>
     </div>
+
   )
 }
 
