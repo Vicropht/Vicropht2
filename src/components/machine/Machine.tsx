@@ -1,9 +1,37 @@
-import React, { MouseEventHandler, useEffect } from 'react'
+import React, { MouseEventHandler, useCallback, useEffect, useState } from 'react'
 import clawImg from './../../assets/claw.jpg'
 
 function Claw() {
+  const [left, setLeft] = useState(0);
+  const fn = useCallback((event: React.KeyboardEvent<HTMLDivElement>) => {
+    console.log(event.key);
+
+    switch (event.key) {
+      case 'ArrowLeft':
+        setLeft((prevLeft) => prevLeft + 10)
+        console.log(left)
+        break
+
+      case 'ArrowRight':
+        setLeft((prevLeft) => prevLeft - 10)
+        break
+
+      case ' ':
+        break
+
+      default:
+        break
+    }
+  }, [])
+
+  useEffect(() => {
+
+  }, [])
+
   return (
-    <img width="200" src={clawImg} className="claw" alt="claw" />
+    <div tabIndex={0} style={{ left }} onKeyDown={fn}>
+      <img width="200" src={clawImg} className="claw" alt="claw" />
+    </div>
   )
 }
 
@@ -27,33 +55,6 @@ function GrabButton() {
 
 
 export default function Machine() {
-  useEffect(() => {
-    function handleKeyDown(e: any) {
-      switch (e.keyCode) {
-        case 37:
-          console.log('left')
-          break
-
-        case 39:
-          console.log('right')
-          break
-
-        case 32:
-          console.log('space')
-          break
-
-        default:
-          break
-      }
-    }
-
-    document.addEventListener('keydown', handleKeyDown);
-
-    return function cleanup() {
-      document.removeEventListener('keydown', handleKeyDown);
-    }
-  }, [])
-
   return (
     <div>
       <div className='claw_area'>
