@@ -1,35 +1,31 @@
 import React, { MouseEventHandler, useCallback, useEffect, useState } from 'react'
 import clawImg from './../../assets/claw.jpg'
 
-function Claw() {
-  const [left, setLeft] = useState(0);
-  const fn = useCallback((event: React.KeyboardEvent<HTMLDivElement>) => {
-    console.log(event.key);
 
-    switch (event.key) {
-      case 'ArrowLeft':
-        setLeft((prevLeft) => prevLeft + 10)
-        console.log(left)
-        break
+const [left, setLeft] = useState(window.innerWidth / 2);
+const [top, setTop] = useState(0);
 
-      case 'ArrowRight':
-        setLeft((prevLeft) => prevLeft - 10)
-        break
+const handleKeyDown = useCallback((event: React.KeyboardEvent<HTMLDivElement>) => {
+  switch (event.key) {
+    case 'ArrowLeft':
+      setLeft((prevLeft) => prevLeft <= 0 ? prevLeft : prevLeft - 10)
+      break
 
-      case ' ':
-        break
+    case 'ArrowRight':
+      setLeft((prevLeft) => prevLeft >= window.innerWidth ? prevLeft : prevLeft + 10)
+      break
 
-      default:
-        break
-    }
-  }, [])
+    case ' ':
+      break
 
-  useEffect(() => {
+    default:
+      break
+  }
+}, [])
 
-  }, [])
-
+export function Claw() {
   return (
-    <div tabIndex={0} style={{ left }} onKeyDown={fn}>
+    <div tabIndex={0} style={{ left: left, top: top, position: 'absolute' }} onKeyDown={handleKeyDown}>
       <img width="200" src={clawImg} className="claw" alt="claw" />
     </div>
   )
