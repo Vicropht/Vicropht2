@@ -1,7 +1,7 @@
 import { SocialIcon } from 'react-social-icons'
 import arcadeCoin from './assets/arcade-coin.svg'
 import './App.css'
-import { Machine } from './machine/Machine'
+import Machine from "./machine/Machine"
 import {
   BrowserRouter as Router,
   Switch,

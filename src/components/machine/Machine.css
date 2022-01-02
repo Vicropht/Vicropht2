@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.machine-panel {
+  height: 100px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
