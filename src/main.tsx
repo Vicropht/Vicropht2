@@ -1,12 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-// import App from './components/App'
-import Machine from './components/machine/Machine'
+import App from './App'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Machine />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 )

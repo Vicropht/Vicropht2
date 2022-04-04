@@ -1,0 +1,21 @@
+@import url("http://fonts.cdnfonts.com/css/arcade-classic");
+@import "material-icons/iconfont/material-icons.css";
+
+.App {
+  background-color: #0b0c10;
+  text-align: center;
+  height: 100vh;
+}
+
+p {
+  color: #c5c6c7;
+}
+
+pre {
+  color: #c5c6c7;
+  text-orientation: upright;
+  padding: 5px 0 0;
+  margin: 0;
+  text-align: start;
+  filter: blur(0.35px);
+}

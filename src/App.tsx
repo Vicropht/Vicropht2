@@ -1,22 +1,14 @@
+import { useState } from 'react';
 import { SocialIcon } from 'react-social-icons'
-import arcadeCoin from './assets/arcade-coin.svg'
 import './App.css'
-import Machine from "./machine/Machine"
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { Sidebar } from './components/sidebar/Sidebar'
 
 function App() {
   return (
-    <div className="App">
+    <div className="App stars twinkling clouds">
+      <Sidebar />
       <div className='Coin-view'>
         <p className="insert-coin-text pointer">Insert coin</p>
-        <Link to="/machine">
-          <img src={arcadeCoin} className="coin" alt="coin" />
-        </Link>
 
         <div className="socials">
           <SocialIcon url="https://twitter.com/CristophVictor" />
@@ -25,15 +17,10 @@ function App() {
           <SocialIcon url="https://www.linkedin.com/in/vicropht/" />
         </div>
       </div>
-
-      <Switch>
-        <Route path="machine">
-          <Machine />
-        </Route>
-      </Switch>
     </div>
-
   )
 }
+
+const hidden = true;
 
 export default App
