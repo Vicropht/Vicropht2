@@ -64,10 +64,6 @@ export default function Machine() {
         <div className='machine-panel flex justify-center'>
           <div className='buttons-area'>
             <div className='flex flex-row gap-12'>
-              {/* <ArrowLeft />
-            <GrabButton />
-            <ArrowRight /> */}
-              <img width={100} src='https://creazilla-store.fra1.digitaloceanspaces.com/emojis/42234/joystick-emoji-clipart-md.png'></img>
             </div>
           </div>
         </div>

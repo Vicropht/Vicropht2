@@ -1,19 +1,20 @@
 import React, { Component } from 'react'
+import './Container.css'
 
 type Props = {}
 
 type State = {}
 
-export class Sidebar extends Component<Props, State> {
+export class Container extends Component<Props, State> {
   state = {}
 
   render() {
     return (
       <div className='wrapper'>
-        <pre>Sidebar works!</pre>
+        <span>Vicropht</span>
       </div>
     )
   }
 }
 
-export default Sidebar
+export default Container

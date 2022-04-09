@@ -1,15 +1,13 @@
 import { useState } from 'react';
 import { SocialIcon } from 'react-social-icons'
 import './App.css'
-import { Sidebar } from './components/sidebar/Sidebar'
+import { Container } from './components/sidebar/Container'
 
 function App() {
   return (
     <div className="App stars twinkling clouds">
-      <Sidebar />
+      <Container />
       <div className='Coin-view'>
-        <p className="insert-coin-text pointer">Insert coin</p>
-
         <div className="socials">
           <SocialIcon url="https://twitter.com/CristophVictor" />
           <SocialIcon url="https://github.com/Vicropht" />
@@ -20,7 +18,5 @@ function App() {
     </div>
   )
 }
-
-const hidden = true;
 
 export default App

@@ -1,14 +1,17 @@
 @import url("http://fonts.cdnfonts.com/css/arcade-classic");
-@import "material-icons/iconfont/material-icons.css";
+@import url("https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@200&display=swap");
+
+body {
+  text-align: center;
+  font-family: "Anek Tamil";
+  letter-spacing: 1px;
+  color: #c5c6c7;
+}
 
 .App {
   background-color: #0b0c10;
   text-align: center;
   height: 100vh;
-}
-
-p {
-  color: #c5c6c7;
 }
 
 pre {
