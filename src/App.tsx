@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { SocialIcon } from 'react-social-icons'
 import './App.css'
-import { Container } from './components/sidebar/Container'
+import { Container } from './components/container/Container'
 
 function App() {
   return (
-    <div className="App stars twinkling clouds">
+    <div className="App">
       <Container />
       <div className='Coin-view'>
         <div className="socials">
