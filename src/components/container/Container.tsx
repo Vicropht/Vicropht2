@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Container.css'
+import './Container.scss'
 
 type Props = {}
 
@@ -11,7 +11,14 @@ export class Container extends Component<Props, State> {
   render() {
     return (
       <div className='wrapper'>
-        <span>Vicropht</span>
+        <h1 className='title'>Vicropht</h1>
+
+        <div className='socials'>
+          <a href="https://twitter.com/CristophVictor">Twitter</a>
+          <a href="https://github.com/Vicropht" >GitHub</a>
+          <a href="mailto:vicropht@protonmail.com" >Contact</a>
+          <a href="https://www.linkedin.com/in/vicropht/" >LinkedIn</a>
+        </div>
       </div>
     )
   }

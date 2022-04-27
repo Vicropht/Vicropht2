@@ -1,0 +1,23 @@
+.wrapper {
+  display: inline-block;
+  background-color: #1f2833;
+  text-align: center;
+
+  .title {
+    font-size: xx-large;
+  }
+
+  .socials {
+    a {
+      margin-left: 2em;
+
+      &:hover {
+        color: #66fcf1;
+      }
+
+      &:last-child {
+        margin-right: 2em;
+      }
+    }
+  }
+}
