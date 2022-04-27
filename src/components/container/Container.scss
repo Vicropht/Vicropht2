@@ -1,7 +1,16 @@
+@use "../../assets/colors" as colors;
+
 .wrapper {
   display: inline-block;
-  background-color: #1f2833;
+  background-color: colors.$lightgrey;
   text-align: center;
+  position: relative;
+  z-index: 2;
+
+  Avatar {
+    display: flex;
+    justify-content: center;
+  }
 
   .title {
     font-size: xx-large;
@@ -12,7 +21,7 @@
       margin-left: 2em;
 
       &:hover {
-        color: #66fcf1;
+        color: colors.$light_cyan;
       }
 
       &:last-child {

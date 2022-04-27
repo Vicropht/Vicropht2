@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { ProfilePic } from '../profile-pic/ProfilePic'
 import './Container.scss'
+import Avatar from '../avatar/Avatar'
 
 type Props = {}
 
@@ -14,7 +14,7 @@ export class Container extends Component<Props, State> {
       <div className='wrapper'>
         <h1 className='title'>Vicropht</h1>
 
-        <ProfilePic />
+        <Avatar />
 
         <div className='socials'>
           <a href="https://twitter.com/CristophVictor">Twitter</a>

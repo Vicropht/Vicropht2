@@ -4,14 +4,16 @@ import { Container } from './components/container/Container'
 function App() {
   return (
     <div className="App">
-      {[...Array(200)].map((_, i) =>
-        <div key={i} className='circle-container'>
-          <div className='circle'></div>
-        </div>
-      )}
-      <body>
+      <div className='background-effect'>
+        {[...Array(200)].map((_, i) =>
+          <div key={i} className='circle-container'>
+            <div className='circle'></div>
+          </div>
+        )}
+      </div>
+      <div>
         <Container />
-      </body>
+      </div>
     </div>
   )
 }
