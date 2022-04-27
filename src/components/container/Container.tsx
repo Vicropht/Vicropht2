@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { ProfilePic } from '../profile-pic/ProfilePic'
 import './Container.scss'
 
 type Props = {}
@@ -12,6 +13,8 @@ export class Container extends Component<Props, State> {
     return (
       <div className='wrapper'>
         <h1 className='title'>Vicropht</h1>
+
+        <ProfilePic />
 
         <div className='socials'>
           <a href="https://twitter.com/CristophVictor">Twitter</a>
