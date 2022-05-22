@@ -1,14 +1,21 @@
 @use "../../assets/colors" as colors;
 
+.container-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
 .wrapper {
   display: inline-block;
-  background-color: colors.$lightgrey;
+  background-color: rgba(31, 40, 51, 0.25);
   text-align: center;
   position: relative;
   z-index: 2;
 
   Avatar {
-    display: flex;
     justify-content: center;
   }
 
