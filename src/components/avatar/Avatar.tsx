@@ -1,27 +1,20 @@
 import React, { Component, useReducer } from 'react'
 import './Avatar.scss'
-import PrimaryAvatar from '../../assets/avatars/avatar-0.jpg';
+import AvatarPic from '../../assets/avatars/avatar.jpg';
+import AestethicPic from '../../assets/avatars/aestethic-avatar.jpg';
 
-type Props = {}
+type Props = { isAestethic: boolean };
 
-type State = {};
-
-export class Avatar extends Component<Props, State> {
-  state = {};
-
-  componentDidUpdate() {
-
-  }
-
-  render() {
-    let avatarPath = PrimaryAvatar;
-
-    return (
-      <div className='profile-pic'>
-        <img src={avatarPath} key={avatarPath} width={300} height={600} />
-      </div>
-    )
-  }
+export function Avatar(props: Props) {
+  return (
+    <div className={`${props.isAestethic ? "aesthetic-effect-crt" : ""} profile-pic`}>
+      {
+        !props.isAestethic ?
+          <img src={AvatarPic} /> :
+          <img src={AestethicPic} />
+      }
+    </div>
+  )
 }
 
-export default Avatar
+export default Avatar;

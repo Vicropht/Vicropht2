@@ -14,9 +14,13 @@ body {
 }
 
 .App {
-  background-color: #000000;
+  background-color: colors.$black;
   text-align: center;
   height: 100vh;
+
+  &.aestethic {
+    background-image: url("./assets/vapor-background.jpg");
+  }
 
   pre {
     color: colors.$smoke_white;
