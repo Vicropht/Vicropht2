@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
-    "deploy": "yarn build && gh-pages -d dist"
+    "deploy": "tsc && vite build && gh-pages -d dist"
   },
   "dependencies": {
     "autoprefixer": "^10.4.0",
