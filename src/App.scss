@@ -2,6 +2,81 @@
 @import url("http://fonts.cdnfonts.com/css/arcade-classic");
 @import url("https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@200&display=swap");
 
+@mixin particleEffect($particleNum, $particleBaseSize) {
+  position: absolute;
+  transform: translateY(-10vh);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  z-index: auto;
+
+  .circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    mix-blend-mode: screen;
+    background-image: radial-gradient(hsl(53, 100%, 98%), hsl(261, 98%, 39%) 10%, hsla(300, 93%, 41%, 0.493) 56%);
+    animation: fade-frames 600ms infinite;
+
+    @keyframes fade-frames {
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.7;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes scale-frames {
+      0% {
+        transform: scale3d(0.4, 0.4, 1);
+      }
+
+      50% {
+        transform: scale3d(2.2, 2.2, 1);
+      }
+
+      100% {
+        transform: scale3d(0.4, 0.4, 1);
+      }
+    }
+  }
+
+  @for $i from 1 through $particleNum {
+    &:nth-child(#{$i}) {
+      $circleSize: random($particleBaseSize);
+      width: $circleSize + px;
+      height: $circleSize + px;
+
+      $startPositionY: random(10) + 100;
+      $framesName: "move-frames-" + $i;
+      $moveDuration: 28000 + random(9000) + ms;
+
+      animation-name: #{$framesName};
+      animation-duration: $moveDuration;
+      animation-delay: random(37000) + ms;
+
+      @keyframes #{$framesName} {
+        from {
+          transform: translate3d(#{random(100) + vw}, #{$startPositionY + vh}, 0);
+        }
+
+        to {
+          transform: translate3d(#{random(100) + vw}, #{- $startPositionY - random(30) + vh}, 0);
+        }
+      }
+
+      .circle {
+        animation-delay: random(4000) + ms;
+      }
+    }
+  }
+}
+
 * {
   overflow: hidden;
 }
@@ -18,7 +93,7 @@ body {
   text-align: center;
   height: 100vh;
 
-  &.aestethic {
+  &.aestethic-mode {
     background-image: url("./assets/vapor-background.jpg");
   }
 
@@ -34,84 +109,7 @@ body {
   .background-effect {
     z-index: 1;
     .circle-container {
-      $particleNum: 200;
-      $particleColor: hsl(0, 0%, 100%);
-
-      position: absolute;
-      transform: translateY(-10vh);
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
-      z-index: auto;
-
-      .circle {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        mix-blend-mode: screen;
-        background-image: radial-gradient(hsl(258, 43%, 53%), hsl(0, 0%, 100%) 10%, hsla(59, 44%, 46%, 0.87) 56%);
-
-        animation: fadein-frames 200ms infinite, scale-frames 2s infinite;
-
-        @keyframes fade-frames {
-          0% {
-            opacity: 1;
-          }
-
-          50% {
-            opacity: 0.7;
-          }
-
-          100% {
-            opacity: 1;
-          }
-        }
-
-        @keyframes scale-frames {
-          0% {
-            transform: scale3d(0.4, 0.4, 1);
-          }
-
-          50% {
-            transform: scale3d(2.2, 2.2, 1);
-          }
-
-          100% {
-            transform: scale3d(0.4, 0.4, 1);
-          }
-        }
-      }
-
-      $particleBaseSize: 8;
-
-      @for $i from 1 through $particleNum {
-        &:nth-child(#{$i}) {
-          $circleSize: random($particleBaseSize);
-          width: $circleSize + px;
-          height: $circleSize + px;
-
-          $startPositionY: random(10) + 100;
-          $framesName: "move-frames-" + $i;
-          $moveDuration: 28000 + random(9000) + ms;
-
-          animation-name: #{$framesName};
-          animation-duration: $moveDuration;
-          animation-delay: random(37000) + ms;
-
-          @keyframes #{$framesName} {
-            from {
-              transform: translate3d(#{random(100) + vw}, #{$startPositionY + vh}, 0);
-            }
-
-            to {
-              transform: translate3d(#{random(100) + vw}, #{- $startPositionY - random(30) + vh}, 0);
-            }
-          }
-
-          .circle {
-            animation-delay: random(4000) + ms;
-          }
-        }
-      }
+      @include particleEffect(250, 6);
     }
   }
 }

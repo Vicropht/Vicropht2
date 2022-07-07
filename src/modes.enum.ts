@@ -1,5 +1,5 @@
 export enum Modes {
-    default = "mode-default",
-    aestethic = "mode-aestethic",
-    comfy = "mode-comfy",
+    default = "default-mode",
+    aestethic = "aestethic-mode",
+    comfy = "comfy-mode",
 }

@@ -95,6 +95,8 @@
   left: 0;
 }
 
-.aesthetic-effect-text-glitch {
-  @include textGlitch("aesthetic-effect-text-glitch", 17, white, red, blue, 450, 115);
+.aestethic-mode {
+  .title{
+    @include textGlitch("aesthetic-effect-text-glitch", 17, white, red, blue, 450, 115);
+  }
 }
