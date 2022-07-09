@@ -87,14 +87,6 @@
   }
 }
 
-.win-wrapper {
-  margin-bottom: 1px;
-  margin-left: 1px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-}
-
 .aesthetic-effect-text-glitch {
   @include textGlitch("aesthetic-effect-text-glitch", 17, white, red, blue, 450, 115);
 }
