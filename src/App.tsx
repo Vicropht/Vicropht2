@@ -1,10 +1,14 @@
 import './App.scss'
 import { Container } from './components/container/Container'
 import WinLogo from './assets/win-logo.png';
+import CoffeeIcon from './assets/coffee.png';
+import MenuClosed from './assets/menu_icon.svg'
+import MenuOpen from './assets/menu-open.svg'
 import { useState } from 'react';
 import { Modes } from './modes.enum';
 
 export default function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
   const [currentMode, setMode] = useState(Modes.default);
 
   const modeHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -15,7 +19,18 @@ export default function App() {
     setMode(previousMode => previousMode !== Modes.aestethic ? button.name as Modes : Modes.default);
   }
 
-  // TODO: Add 'broken' mode when clicking too many time
+  // TODO: Add 'broken' mode when clicking too many times
+  const toggleModeMenu = () => {
+    setMenuOpen(menuOpen => !menuOpen);
+  }
+
+  const toggleAestethic = () => {
+    setMode(() => Modes.aestethic);
+  }
+
+  const toggleComfy = () => {
+    setMode(() => Modes.comfy);
+  }
 
   return (
     <div className={`App ${currentMode}`}>
@@ -29,9 +44,23 @@ export default function App() {
       <div>
         <Container currentMode={currentMode} />
       </div>
-      <div className='win-wrapper'>
-        <button title='A E S T E T H I C  M O D E' name={`${Modes.aestethic}`} onClick={modeHandler}>
+      <nav role="navigation">
+        <div id='menuWrapper'>
+          <input type="checkbox" />
+
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+      <div className='menu-item'>
+        <button title='A E S T E T H I C  M O D E' onClick={toggleAestethic}>
           <img src={WinLogo} width={30}></img>
+        </button>
+      </div>
+      <div className='menu-item'>
+        <button title='comfy mode' onClick={toggleComfy}>
+          <img src={CoffeeIcon} width={30}></img>
         </button>
       </div>
     </div>
