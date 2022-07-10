@@ -111,7 +111,7 @@ body {
     filter: blur(0.35px);
   }
 
-  .background-effect {
+  &:not(.comfy-mode) .background-effect {
     z-index: 1;
     .circle-container {
       @include particleEffect(250, 6);
