@@ -24,5 +24,3 @@ export function Container(props: Props) {
     </div>
   )
 }
-
-export default Container

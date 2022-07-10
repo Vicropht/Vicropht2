@@ -11,7 +11,7 @@
     @for $i from 1 through 2 {
       @keyframes #{$name}-anim-#{$i} {
         @for $i from 0 through $steps {
-          #{percentage($i*(1/$steps))} {
+          #{percentage($i*calc(1 / $steps))} {
             clip: rect(random($height) + px, $width + px, random($height) + px, 0);
           }
         }
@@ -96,7 +96,7 @@
 }
 
 .aestethic-mode {
-  .title{
+  .title {
     @include textGlitch("aesthetic-effect-text-glitch", 17, white, red, blue, 450, 115);
   }
 }
