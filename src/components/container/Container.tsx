@@ -8,6 +8,7 @@ export function Container({ currentMode }: { currentMode: Modes }): ReactElement
     <div className='container-center'>
       <div className={`wrapper ${currentMode}`}>
         <h1 className={`title ${currentMode}`} data-glitch="V I C R O P H T">V I C R O P H T</h1>
+        <i><a href='https://en.wikipedia.org/wiki/Learning-by-doing'>"Learning by doing"</a></i><br />
         <a className='discord' href='https://discord.com/users/355435413705326597'>[root]#6722</a>
 
         <Avatar currentMode={currentMode} />

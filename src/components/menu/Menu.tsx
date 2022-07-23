@@ -22,7 +22,7 @@ export function Menu({ exportMode }: Props): ReactElement {
 
   return (
     <div id='menuWrapper'>
-      <button onClick={() => setMenuOpen(open => !open)}>
+      <button id='menuBurger' onClick={() => setMenuOpen(open => !open)}>
         <FontAwesomeIcon icon={faBars} />
       </button>
       {menuOpen && (
@@ -48,7 +48,7 @@ function MenuButtonFa({ source, onClick }: { source: IconDefinition; onClick: ()
 function MenuButtonSrc({ source, onClick }: { source: string; onClick: () => void }): ReactElement {
   return (
     <button onClick={onClick}>
-      <img src={source} width={30}></img>
+      <img src={source}></img>
     </button>
   );
 }
