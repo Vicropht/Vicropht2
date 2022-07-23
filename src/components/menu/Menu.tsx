@@ -5,43 +5,50 @@ import { ReactElement, useState } from 'react';
 import { Modes } from '../../modes.enum';
 import WinIcon from '../../assets/win-logo.png';
 import CoffeeIcon from '../../assets/coffee.png';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { IconDefinition, IconProp } from '@fortawesome/fontawesome-svg-core';
 
-export function Menu(): ReactElement {
+type Props = { exportMode: (mode: Modes) => void };
+
+export function Menu({ exportMode }: Props): ReactElement {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [mode, setMode] = useState(Modes.default);
 
   // TODO: Add 'broken' mode when clicking too many times
   const modeHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
 
     const button: HTMLButtonElement = event.currentTarget;
-    { exportMode(() => button.name as Modes) };
+    exportMode(button.name as Modes);
   }
 
   return (
     <div id='menuWrapper'>
-      <button id={`${menuOpen ? 'menuOpen' : ''}`} onClick={setMenuOpen(open => !open)}>
+      <button onClick={() => setMenuOpen(open => !open)}>
         <FontAwesomeIcon icon={faBars} />
       </button>
-      <MenuButton fAwesome={true} source={faHome} setMode={ } />
-      <MenuButton fAwesome={false} source={WinIcon} setMode={ } />
-      <MenuButton fAwesome={false} source={CoffeeIcon} setMode={ } />
+      {menuOpen && (
+        // See React.Fragments
+        <>
+          <MenuButtonFa source={faHome} onClick={() => exportMode(Modes.default)} />
+          <MenuButtonSrc source={WinIcon} onClick={() => exportMode(Modes.aestethic)} />
+          <MenuButtonSrc source={CoffeeIcon} onClick={() => exportMode(Modes.comfy)} />
+        </>
+      )}
     </div>
   );
 }
 
-function MenuButton({ fAwesome, source, setMode() }: { fAwesome: IconDefinition; source: string; setMode: any }): ReactElement {
-  return (fAwesome ?
-    (
-      <button id={`${menuOpen ? 'menuOpen' : ''}`} onClick={menuHandler}>
-        <FontAwesomeIcon icon={source} />
-      </button>
-    ) :
-    (
-      <button id={`${menuOpen ? 'menuOpen' : ''}`} onClick={menuHandler}>
-        <img src={source} width={30}></img>
-      </button>
-    )
+function MenuButtonFa({ source, onClick }: { source: IconDefinition; onClick: () => void }): ReactElement {
+  return (
+    <button onClick={onClick}>
+      <FontAwesomeIcon icon={source} />
+    </button>
+  );
+}
+
+function MenuButtonSrc({ source, onClick }: { source: string; onClick: () => void }): ReactElement {
+  return (
+    <button onClick={onClick}>
+      <img src={source} width={30}></img>
+    </button>
   );
 }

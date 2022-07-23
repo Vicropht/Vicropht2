@@ -16,7 +16,7 @@ export default function App() {
           </div>
         )}
       </div>
-      <Menu exportMode={mode} />
+      <Menu exportMode={(mode) => setMode(mode)} />
       <div>
         <Container currentMode={currentMode} />
       </div>

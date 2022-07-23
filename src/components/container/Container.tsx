@@ -3,7 +3,7 @@ import './Container.scss'
 import Avatar from '../avatar/Avatar'
 import { Modes } from '../../modes.enum'
 
-export function Container({ currentMode }): ReactElement {
+export function Container({ currentMode }: { currentMode: Modes }): ReactElement {
   return (
     <div className='container-center'>
       <div className={`wrapper ${currentMode}`}>
