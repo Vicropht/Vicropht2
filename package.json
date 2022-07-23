@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
-    "deploy": "tsc && vite build && echo 'vicropht.com' > ./dist/CNAME && gh-pages -d dist"
+    "deploy": "vite build && echo vicropht.com > ./dist/CNAME && gh-pages -d dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
