@@ -7,10 +7,6 @@ import { Modes } from './modes.enum'
 export default function App() {
   const [currentMode, setMode] = useState(Modes.default);
 
-  const changeMode = (mode: Modes) => {
-    setMode(mode);
-  }
-
   return (
     <div className={`App ${currentMode}`}>
       <div className='background-effect'>
@@ -20,7 +16,7 @@ export default function App() {
           </div>
         )}
       </div>
-      <Menu changeMode={changeMode} />
+      <Menu exportMode={mode} />
       <div>
         <Container currentMode={currentMode} />
       </div>
