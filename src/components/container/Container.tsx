@@ -1,4 +1,4 @@
-import React, { Component, ReactElement, useState } from 'react'
+import React, { Component, ReactElement, useEffect, useState } from 'react'
 import './Container.scss'
 import Avatar from '../avatar/Avatar'
 import { Modes } from '../../modes.enum'
@@ -15,7 +15,7 @@ export function Container({ currentMode }: { currentMode: Modes }): ReactElement
 
         {/* Display is set to none instead of creating a condition,
         this way the iframe doesn't have to load everytime the mode changes */}
-        <iframe src='https://imissmycafe.com/' width={300} height={350}></iframe>
+        <iframe src='https://imissmycafe.com/' id='coffe-soundboard' width={300} height={350}></iframe>
 
         <div className='socials'>
           <a href="https://twitter.com/CristophVictor">Twitter</a>

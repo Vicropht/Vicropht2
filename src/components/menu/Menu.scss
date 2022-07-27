@@ -49,19 +49,16 @@
   display: flex;
   flex-direction: column;
   right: 1%;
-  top: 40%;
-
-  #menuBurger {
-    opacity: 50%;
-
-    &:hover {
-      opacity: 100%;
-    }
-  }
+  top: 44%;
 
   button {
     margin: 3px;
     width: 30px;
+    opacity: 35%;
+
+    &:hover {
+      opacity: 100%;
+    }
   }
 
   #burger :active {
