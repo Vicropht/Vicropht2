@@ -13,6 +13,8 @@ export function Container({ currentMode }: { currentMode: Modes }): ReactElement
 
         <Avatar currentMode={currentMode} />
 
+        {/* Display is set to none instead of creating a condition,
+        this way the iframe doesn't have to load everytime the mode changes */}
         <iframe src='https://imissmycafe.com/' width={300} height={350}></iframe>
 
         <div className='socials'>

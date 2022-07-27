@@ -61,6 +61,16 @@
     font-family: "Geo", Arial;
   }
 
+  &.comfy-mode {
+    iframe {
+      display: inherit;
+      position: absolute;
+      left: -80%;
+      top: 16%;
+      border: none;
+    }
+  }
+
   Avatar {
     justify-content: center;
   }
@@ -91,10 +101,7 @@
 }
 
 iframe {
-  position: absolute;
-  left: -80%;
-  top: 16%;
-  border: none;
+  display: none;
 }
 
 .win-wrapper {
