@@ -49,11 +49,12 @@
 
 .wrapper {
   display: inline-block;
-  background-color: rgba(231, 232, 255, 0.123);
+  background-color: rgba(63, 67, 142, 0.12);
   backdrop-filter: blur(12px);
   border-radius: 1%;
-  text-align: center;
+  overflow: visible;
   position: relative;
+  text-align: center;
   z-index: 2;
 
   &.aesthetic-mode {
@@ -89,6 +90,13 @@
   }
 }
 
+iframe {
+  position: absolute;
+  left: -80%;
+  top: 16%;
+  border: none;
+}
+
 .win-wrapper {
   margin-bottom: 1px;
   margin-left: 1px;
@@ -101,4 +109,6 @@
   .title {
     @include textGlitch("aesthetic-effect-text-glitch", 17, white, red, blue, 450, 115);
   }
+
+  color: azure;
 }

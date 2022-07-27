@@ -12,21 +12,13 @@ type Props = { exportMode: (mode: Modes) => void };
 export function Menu({ exportMode }: Props): ReactElement {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // TODO: Add 'broken' mode when clicking too many times
-  const modeHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
-    event.preventDefault();
-
-    const button: HTMLButtonElement = event.currentTarget;
-    exportMode(button.name as Modes);
-  }
-
   return (
     <div id='menuWrapper'>
       <button id='menuBurger' onClick={() => setMenuOpen(open => !open)}>
         <FontAwesomeIcon icon={faBars} />
       </button>
       {menuOpen && (
-        // See React.Fragments
+        // React.Fragments
         <>
           <MenuButtonFa source={faHome} onClick={() => exportMode(Modes.default)} />
           <MenuButtonSrc source={WinIcon} onClick={() => exportMode(Modes.aestethic)} />

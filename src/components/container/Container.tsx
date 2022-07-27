@@ -13,6 +13,8 @@ export function Container({ currentMode }: { currentMode: Modes }): ReactElement
 
         <Avatar currentMode={currentMode} />
 
+        <iframe src='https://imissmycafe.com/' width={300} height={350}></iframe>
+
         <div className='socials'>
           <a href="https://twitter.com/CristophVictor">Twitter</a>
           <a href="https://github.com/Vicropht">GitHub</a>
@@ -20,6 +22,6 @@ export function Container({ currentMode }: { currentMode: Modes }): ReactElement
           <a href="https://www.linkedin.com/in/vicropht/">LinkedIn</a>
         </div>
       </div>
-    </div>
+    </div >
   )
 }

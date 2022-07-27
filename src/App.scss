@@ -100,6 +100,7 @@ body {
   &.comfy-mode {
     background-image: url("./assets/comfy-wallpaper.jpg");
     background-size: cover;
+    filter: grayscale(0.2) sepia(0.15) brightness(1);
   }
 
   pre {
