@@ -57,6 +57,11 @@
   text-align: center;
   z-index: 2;
 
+  .noise {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
   &.aesthetic-mode {
     font-family: "Geo", Arial;
   }
@@ -68,7 +73,7 @@
       left: -80%;
       top: 16%;
       border: none;
-      border-radius: 10%;
+      border-radius: 5%;
     }
   }
 
