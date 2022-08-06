@@ -11,9 +11,9 @@ export function Container({ currentMode }: { currentMode: Modes }): ReactElement
   return (
     <div className='container-center'>
       <div className={`wrapper ${currentMode}`}>
-        <h1 className={`title ${currentMode}`} data-glitch="V I C R O P H T">V I C R O P H T</h1>
+        <h1 className={`title ${currentMode}`} data-glitch="V I C R O P H T" title='who?' >V I C R O P H T</h1>
+        <p>Welcome to my little sandbox on the internet!</p>
         <i><a href='https://en.wikipedia.org/wiki/Learning-by-doing'>"Learning by doing"</a></i><br />
-        <a className='discord' href='https://discord.com/users/355435413705326597'>[root]#6722</a>
 
         <Avatar currentMode={currentMode} />
 
@@ -33,10 +33,11 @@ export function Container({ currentMode }: { currentMode: Modes }): ReactElement
         }
 
         <div className='socials'>
-          <a href="https://twitter.com/CristophVictor">Twitter</a>
-          <a href="https://github.com/Vicropht">GitHub</a>
-          <a href="mailto:vicropht@protonmail.com">Contact</a>
-          <a href="https://www.linkedin.com/in/vicropht/">LinkedIn</a>
+          <a title='tweet tweet' href="https://twitter.com/CristophVictor">Twitter</a>
+          <a title='where the code goes' href="https://github.com/Vicropht">GitHub</a>
+          <a title='you know, this brand new thing from the 70s' href="mailto:vicropht@protonmail.com">Contact</a>
+          <a title='no funny business' href="https://www.linkedin.com/in/vicropht/">LinkedIn</a>
+          <a title='Skype for non-business: root#8673' href="https://discord.com/users/355435413705326597">Discord</a>
         </div>
       </div>
     </div >

@@ -22,7 +22,7 @@ export function Avatar(props: Props) {
   }
 
   return (
-    <div className={`${props.currentMode} profile-pic`}>
+    <div title='The magic of the internet is having the identity you choose' className={`${props.currentMode} profile-pic`}>
       {setAvatar()}
     </div>
   )
